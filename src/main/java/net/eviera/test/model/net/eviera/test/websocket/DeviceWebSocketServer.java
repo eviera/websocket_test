@@ -22,6 +22,7 @@ public class DeviceWebSocketServer {
 
     @OnOpen
     public void open(Session session) {
+        Logger.getLogger(DeviceWebSocketServer.class.getName()).log(Level.INFO, "Se abre sesion [" + session.getId() +"]");
         sessionHandler.addSession(session);
     }
 
